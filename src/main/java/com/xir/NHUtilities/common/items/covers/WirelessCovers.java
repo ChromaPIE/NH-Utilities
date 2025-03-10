@@ -13,8 +13,8 @@ import gregtech.api.interfaces.tileentity.ICoverable;
 import gregtech.api.interfaces.tileentity.IWirelessEnergyHatchInformation;
 import gregtech.api.metatileentity.BaseMetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntity;
-import gregtech.api.util.CoverBehavior;
 import gregtech.api.util.ISerializableObject;
+import gregtech.common.covers.CoverBehavior;
 
 @SuppressWarnings("unused")
 public class WirelessCovers {
