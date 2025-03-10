@@ -131,7 +131,7 @@ public class WirelessCovers {
         }
 
         @Override
-        protected boolean onCoverRightClick(EntityPlayer aPlayer, float aX, float aY, float aZ) {
+        public boolean onCoverRightClick(EntityPlayer aPlayer, float aX, float aY, float aZ) {
             return false;
         }
 

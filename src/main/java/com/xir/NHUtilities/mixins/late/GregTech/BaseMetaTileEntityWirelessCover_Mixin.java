@@ -15,6 +15,7 @@ import com.xir.NHUtilities.common.items.covers.WirelessCovers;
 
 import gregtech.api.metatileentity.BaseMetaTileEntity;
 import gregtech.api.metatileentity.CommonBaseMetaTileEntity;
+import gregtech.common.covers.Cover;
 
 @Mixin(value = BaseMetaTileEntity.class)
 @SuppressWarnings({ "UnusedMixin", "DiscouragedShift" })
@@ -53,7 +54,8 @@ public abstract class BaseMetaTileEntityWirelessCover_Mixin extends CommonBaseMe
         require = 1)
     private void NHUtilities$wirelessCover(CallbackInfo ci) {
         for (ForgeDirection side : ForgeDirection.VALID_DIRECTIONS) {
-            if (getCoverAtSide(side).getCoverBehavior() instanceof WirelessCovers.CoverWirelessDynamo) {
+            Cover cover = getCoverAtSide(side);
+            if (cover instanceof WirelessCovers.CoverWirelessDynamo) {
                 NHUtilities$dumpEnergyToWirelessCache();
                 break;
             }
