@@ -1,6 +1,7 @@
 package com.xir.NHUtilities.common.items.covers;
 
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
+import static gregtech.common.misc.WirelessNetworkManager.ticks_between_energy_addition;
 import static java.lang.Long.min;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,11 +11,11 @@ import net.minecraftforge.fluids.Fluid;
 import com.xir.NHUtilities.common.api.interfaces.mixinHelper.IWirelessCoverEnergyProvider;
 
 import gregtech.api.interfaces.tileentity.ICoverable;
-import gregtech.api.interfaces.tileentity.IWirelessEnergyHatchInformation;
 import gregtech.api.metatileentity.BaseMetaTileEntity;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.util.ISerializableObject;
 import gregtech.common.covers.CoverBehavior;
+import gregtech.common.misc.WirelessNetworkManager;
 
 @SuppressWarnings("unused")
 public class WirelessCovers {
@@ -70,8 +71,7 @@ public class WirelessCovers {
     // endregion
 
     // region AbstractWirelessCover
-    public static abstract class AbstractWirelessCover extends CoverBehavior
-        implements IWirelessEnergyHatchInformation {
+    public static abstract class AbstractWirelessCover extends CoverBehavior {
 
         protected final long transferred_energy_per_operation;
 
