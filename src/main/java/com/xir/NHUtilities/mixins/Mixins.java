@@ -15,7 +15,6 @@ import static com.xir.NHUtilities.config.Config.enableEnhanceOvenGlove;
 import static com.xir.NHUtilities.config.Config.enableEnhancedExUHealingAxe;
 import static com.xir.NHUtilities.config.Config.enableEnhancedTeleporterMKII;
 import static com.xir.NHUtilities.config.Config.enableHologramItemChannelFeature;
-import static com.xir.NHUtilities.config.Config.enableLunchBoxPlus;
 import static com.xir.NHUtilities.config.Config.enableModifyEnderIoCapBankIO;
 import static com.xir.NHUtilities.config.Config.enableModifyWirelessHatchTexture;
 import static com.xir.NHUtilities.config.Config.enableWEToolWithExuHealingAxe;
@@ -145,10 +144,10 @@ public enum Mixins {
             .addCondition(x -> x.or(other -> enableAlwaysDisplayWailaAverageNS))
             .addCondition(x -> x.or(other -> enableAlwaysDisplayNEIOriginalVoltage)),
         newMixinClass("Dense_ME_Channel_MTE_Hatches")
-            .setClass("MEHatchesDenseChannel_Mixin")
-            .setPackagePath(PackagePath.GregTech)
+            .setClass("GTMEHatchesDenseChannel_Mixin")
+            .setPackagePath(PackagePath.AppliedEnergistics2)
             .setPhase(Phase.LATE)
-            .addTargetMod(TargetMod.GregTech)
+            .addTargetMod(TargetMod.GregTech, TargetMod.AppliedEnergistics2)
             .addCondition(enableDenseMEChannelMTEHatches)
 
     ),
@@ -211,22 +210,6 @@ public enum Mixins {
     ),
 
     SpiceOfLife_Modifications(
-
-        newMixinClass("Modify_ServerSide_GuiHandler")
-            .setClass("GuiHandler_Server_Mixin")
-            .setPackagePath(PackagePath.SpiceOfLife)
-            .setPhase(Phase.LATE)
-            .setSide(Side.SERVER)
-            .addTargetMod(TargetMod.SpiceOfLife)
-            .addCondition(enableLunchBoxPlus),
-        newMixinClass("Modify_ClientSide_GuiHandler")
-            .setClass("GuiHandler_Client_Mixin")
-            .setPackagePath(PackagePath.SpiceOfLife)
-            .setPhase(Phase.LATE)
-            .setSide(Side.CLIENT)
-            .addTargetMod(TargetMod.SpiceOfLife)
-            .addCondition(enableLunchBoxPlus)
-
     ),
 
     NewHorizonsCoreMod_Modifications(
@@ -298,6 +281,7 @@ public enum Mixins {
         return mixins;
     }
 
+    // todo 当前的side逻辑存在问题 => platform-side != logic-side
     private static boolean shouldApply(Side side) {
         return side == Side.BOTH || (side == Side.CLIENT && IS_CLIENT_SIDE) || (side == Side.SERVER && IS_SERVER_SIDE);
     }
@@ -316,6 +300,7 @@ public enum Mixins {
         NewHorizonsCoreMod,
         ExtraUtilities,
         Structurelib,
+        AppliedEnergistics2,
 
         ;
 
