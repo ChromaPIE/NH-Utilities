@@ -551,7 +551,7 @@ public class NHURecipes {
 
         GTRecipeBuilder.builder()
             .itemInputs(ItemList.Timepiece.get(1))
-            .fluidInputs(Materials.MagnetohydrodynamicallyConstrainedStarMatter.getMolten(1145))
+            .fluidInputs(Materials.MHDCSM.getMolten(1145))
             .itemOutputs(NHUItemList.EternityVial.get(1))
             // Require stabilized black hole
             .metadata(CompressionTierKey.INSTANCE, 2)

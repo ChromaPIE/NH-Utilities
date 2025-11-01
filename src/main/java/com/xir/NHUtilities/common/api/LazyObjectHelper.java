@@ -106,14 +106,14 @@ public final class LazyObjectHelper {
 
         SuperconductorMaterials = ImmutableList.of(
             Materials.RedstoneAlloy,
-            Materials.Pentacadmiummagnesiumhexaoxid,
-            Materials.Titaniumonabariumdecacoppereikosaoxid,
-            Materials.Uraniumtriplatinid,
-            Materials.Vanadiumtriindinid,
-            Materials.Tetraindiumditindibariumtitaniumheptacoppertetrakaidekaoxid,
-            Materials.Tetranaquadahdiindiumhexaplatiumosminid,
-            Materials.Longasssuperconductornameforuvwire,
-            Materials.Longasssuperconductornameforuhvwire,
+            Materials.SuperconductorMVBase,
+            Materials.SuperconductorHVBase,
+            Materials.SuperconductorEVBase,
+            Materials.SuperconductorIVBase,
+            Materials.SuperconductorLuVBase,
+            Materials.SuperconductorZPMBase,
+            Materials.SuperconductorUVBase,
+            Materials.SuperconductorUHVBase,
             Materials.SuperconductorUEVBase,
             Materials.SuperconductorUIVBase,
             Materials.SuperconductorUMVBase,
@@ -192,7 +192,7 @@ public final class LazyObjectHelper {
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.Bedrockium, amount),
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.BlackPlutonium, amount),
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.SpaceTime, amount),
-            GTOreDictUnificator.get(OrePrefixes.plate, Materials.MagnetohydrodynamicallyConstrainedStarMatter, amount),
+            GTOreDictUnificator.get(OrePrefixes.plate, Materials.MHDCSM, amount),
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.MagMatter, amount));
 
         allMaterialWireOfMachineHull = (defaultAmount, function) -> IntStream
