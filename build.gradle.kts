@@ -15,7 +15,7 @@ wrapperSpotless {
 
 dependencies {
     dependencyDeclarations {
-        gtnhVersion = "2.8.0"
+        gtnhVersion = "daily"
 
         declarationApi {
             declare("GT5-Unofficial")

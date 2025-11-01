@@ -93,7 +93,7 @@ public class MachineLoader {
         int wirelessIdBaseSet = 25100 + 120 + wirelessHatchMetaIdOffset;
 
         Hatch_Dynamo_MAX.set(new MTEHatchDynamo(11294, "hatch.dynamo.tier.14", trans("hatch.dynamo.tier.14"), 14));
-        Hatch_Energy_MAX.set(new MTEHatchEnergy(11304, "hatch.energy.tier.14", trans("hatch.energy.tier.14"), 14));
+        Hatch_Energy_MAX.set(new MTEHatchEnergy(11305, "hatch.energy.tier.14", trans("hatch.energy.tier.14"), 14));
 
         // spotless:off
         Hatch_EnergyMulti4_LV.set(new MTEHatchEnergyMulti(      wirelessIdBaseSet + 1,      "hatch.energymulti04.tier.01",      trans("hatch.energymulti04.tier.01"),       1,      4   ));

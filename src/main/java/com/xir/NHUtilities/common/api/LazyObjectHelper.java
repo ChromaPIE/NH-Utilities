@@ -28,7 +28,6 @@ import com.xir.NHUtilities.common.api.enums.VoltageTier;
 import bartworks.system.material.WerkstoffLoader;
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
-import gregtech.api.enums.MaterialsUEVplus;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTOreDictUnificator;
 
@@ -118,8 +117,8 @@ public final class LazyObjectHelper {
             Materials.SuperconductorUEVBase,
             Materials.SuperconductorUIVBase,
             Materials.SuperconductorUMVBase,
-            MaterialsUEVplus.SpaceTime,
-            MaterialsUEVplus.Universium);
+            Materials.SpaceTime,
+            Materials.Universium);
 
         allMachineHullWireMaterials = ImmutableList.of(
             Materials.Lead,
@@ -136,7 +135,7 @@ public final class LazyObjectHelper {
             Materials.NetherStar,
             Materials.Quantium,
             Materials.BlackPlutonium,
-            MaterialsUEVplus.SpaceTime);
+            Materials.SpaceTime);
         // endregion
 
         allTieredMaterial = (defaultAmount, function) -> IntStream.range(0, TieredMaterials.size())
@@ -192,10 +191,9 @@ public final class LazyObjectHelper {
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.Neutronium, amount),
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.Bedrockium, amount),
             GTOreDictUnificator.get(OrePrefixes.plate, Materials.BlackPlutonium, amount),
-            GTOreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.SpaceTime, amount),
-            GTOreDictUnificator
-                .get(OrePrefixes.plate, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, amount),
-            GTOreDictUnificator.get(OrePrefixes.plate, MaterialsUEVplus.MagMatter, amount));
+            GTOreDictUnificator.get(OrePrefixes.plate, Materials.SpaceTime, amount),
+            GTOreDictUnificator.get(OrePrefixes.plate, Materials.MagnetohydrodynamicallyConstrainedStarMatter, amount),
+            GTOreDictUnificator.get(OrePrefixes.plate, Materials.MagMatter, amount));
 
         allMaterialWireOfMachineHull = (defaultAmount, function) -> IntStream
             .range(0, allMachineHullWireMaterials.size())

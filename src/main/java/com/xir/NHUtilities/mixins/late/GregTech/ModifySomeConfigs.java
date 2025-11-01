@@ -20,9 +20,9 @@ public class ModifySomeConfigs {
         at = @At(value = "INVOKE", target = "Lgregtech/common/GTProxy;reloadNEICache()V", shift = At.Shift.BEFORE),
         require = 1)
     private static void nhu$modification(CallbackInfo ci) {
-        if (Config.enableAlwaysDisplayRecipeOwner) GTMod.gregtechproxy.mNEIRecipeOwner = true;
-        if (Config.enableAlwaysDisplayWailaAverageNS) GTMod.gregtechproxy.wailaAverageNS = true;
-        if (Config.enableAlwaysDisplayNEIOriginalVoltage) GTMod.gregtechproxy.mNEIOriginalVoltage = true;
+        if (Config.enableAlwaysDisplayRecipeOwner) GTMod.proxy.mNEIRecipeOwner = true;
+        if (Config.enableAlwaysDisplayWailaAverageNS) GTMod.proxy.wailaAverageNS = true;
+        if (Config.enableAlwaysDisplayNEIOriginalVoltage) GTMod.proxy.mNEIOriginalVoltage = true;
     }
 
     @ModifyExpressionValue(
