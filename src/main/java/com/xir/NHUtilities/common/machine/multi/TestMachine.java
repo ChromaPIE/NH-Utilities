@@ -130,7 +130,7 @@ public class TestMachine extends NHU_MTEBase<TestMachine> {
                 buildHatchAdder(TestMachine.class)
                     .atLeast(InputHatch, OutputHatch, InputBus, OutputBus, Energy.or(ExoticEnergy))
                     .adder(TestMachine::addToMachineListWithExoticEnergy)
-                    .dot(1)
+                    .hint(1)
                     .casingIndex(BlockGTCasingsTT.textureOffset + 1)
                     .buildAndChain(ofBlock(sBlockCasingsTT, 1)))
             .addElement('B', ofBlock(sBlockCasingsTT, 2))
@@ -151,7 +151,7 @@ public class TestMachine extends NHU_MTEBase<TestMachine> {
     @Override
     public int survivalConstruct(ItemStack stackSize, int elementBudget, ISurvivalBuildEnvironment env) {
         if (mMachine) return -1;
-        return survivialBuildPiece(
+        return survivalBuildPiece(
             STRUCTURE_PIECE_MAIN,
             stackSize,
             horizontalOffSet,

@@ -34,9 +34,13 @@ public final class CharcoalPitExtendUtil {
         }
         if (stack.getItem() instanceof ItemBlock item) {
             var log = Block.getBlockFromItem(item);
-            var meta = feather.getDamage(stack);
-            String tTool = log.getHarvestTool(meta);
-            return OrePrefixes.log.contains(stack) && ("axe".equals(tTool)) && (log.getMaterial() == Material.wood);
+            var meta = stack.getItemDamage();
+            try {
+                String tTool = log.getHarvestTool(meta);
+                return OrePrefixes.log.contains(stack) && ("axe".equals(tTool)) && (log.getMaterial() == Material.wood);
+            } catch (IllegalArgumentException e) {
+                return false;
+            }
         }
         return false;
     };

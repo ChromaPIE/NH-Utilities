@@ -98,7 +98,7 @@ public class TCBlastFurnace extends MTEAbstractMultiFurnace<TCBlastFurnace> impl
                 OutputHatch.withAdder(TCBlastFurnace::addOutputHatchToTopList)
                     .withCount(t -> t.mPollutionOutputHatches.size()))
                 .casingIndex(CASING_INDEX)
-                .dot(1)
+                .hint(1)
                 .buildAndChain(GregTechAPI.sBlockCasings1, CASING_INDEX))
         .addElement('m', Muffler.newAny(CASING_INDEX, 2))
         .addElement('C', activeCoils(ofCoil(TCBlastFurnace::setCoilLevel, TCBlastFurnace::getCoilLevel)))
@@ -107,7 +107,7 @@ public class TCBlastFurnace extends MTEAbstractMultiFurnace<TCBlastFurnace> impl
             buildHatchAdder(TCBlastFurnace.class)
                 .atLeast(InputHatch, OutputHatch, InputBus, OutputBus, Maintenance, Energy)
                 .casingIndex(CASING_INDEX)
-                .dot(1)
+                .hint(1)
                 .buildAndChain(GregTechAPI.sBlockCasings1, CASING_INDEX))
         .build();
 
