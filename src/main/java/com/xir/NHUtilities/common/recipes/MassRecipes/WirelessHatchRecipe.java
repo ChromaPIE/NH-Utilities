@@ -74,12 +74,7 @@ public class WirelessHatchRecipe {
             .map(v -> copyAmount(v.hatchStack, 1))
             .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
 
-        ImmutableList<ItemStack> dynamo_2A = LazyObjectHelper.Hatch_2A.get()
-            .stream()
-            .filter(filterDynamo)
-            .sorted(Comparator.comparingInt(sortByVoltageTier))
-            .map(v -> copyAmount(v.hatchStack, 1))
-            .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
+        // NOTE: dynamo_2A removed - no longer needed after GT5 PR #5650 removed 2A Wireless Dynamo Hatches
 
         ImmutableList<ItemStack> wirelessEnergy_2A = LazyObjectHelper.Wireless_Hatch_2A.get()
             .stream()
@@ -88,12 +83,8 @@ public class WirelessHatchRecipe {
             .map(v -> copyAmount(v.hatchStack, 1))
             .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
 
-        ImmutableList<ItemStack> wirelessDynamo_2A = LazyObjectHelper.Wireless_Hatch_2A.get()
-            .stream()
-            .filter(v -> v.hatchType.equals(HatchType.WirelessDynamoHatch))
-            .sorted(Comparator.comparingInt(sortByVoltageTier))
-            .map(v -> copyAmount(v.hatchStack, 1))
-            .collect(Collectors.collectingAndThen(Collectors.toList(), ImmutableList::copyOf));
+        // NOTE: 2A WirelessDynamoHatch removed by GT5 PR #5650 "Remove Single-amp Wireless Dynamos"
+        // wirelessDynamo_2A is no longer needed
 
         ImmutableList<ItemStack> sensor = ImmutableList.<ItemStack>builder()
             .add(GTOreDictUnificator.get(OrePrefixes.wireGt12, Materials.Lead, 1))
@@ -222,21 +213,7 @@ public class WirelessHatchRecipe {
                 .duration(10 * SECONDS * (i + 1))
                 .addTo(assemblerRecipes);
 
-            // dynamo
-            GTRecipeBuilder.builder()
-                .itemInputsUnsafe(
-                    dynamo_2A.get(i),
-                    emitter.get(i),
-                    circuit.get(i),
-                    coils.get(i),
-                    wires.get(i),
-                    chips.get(i),
-                    GTUtility.getIntegratedCircuit(24))
-                .fluidInputs(fluids.get(i))
-                .itemOutputs(wirelessDynamo_2A.get(i))
-                .eut(GTValues.VP[i])
-                .duration(10 * SECONDS * (i + 1))
-                .addTo(assemblerRecipes);
+            // NOTE: 2A dynamo recipe removed - GT5 PR #5650 removed 2A Wireless Dynamo Hatches
         }
 
         for (int i = iZPM_Index; i < MAX_Index; i++) {
@@ -250,15 +227,7 @@ public class WirelessHatchRecipe {
                 .metadata(PRECISE_ASSEMBLER_CASING_TIER, i < 12 ? i < 9 ? 1 : 2 : 3)
                 .addTo(preciseAssemblerRecipes);
 
-            // dynamo
-            GTRecipeBuilder.builder()
-                .itemInputsUnsafe(dynamo_2A.get(i), emitter.get(i), circuit.get(i), chips.get(i))
-                .fluidInputs(fluids.get(i))
-                .itemOutputs(wirelessDynamo_2A.get(i))
-                .eut(GTValues.VP[i - 1])
-                .duration(10 * SECONDS * (i + 1))
-                .metadata(PRECISE_ASSEMBLER_CASING_TIER, i < 12 ? i < 9 ? 1 : 2 : 3)
-                .addTo(preciseAssemblerRecipes);
+            // NOTE: 2A dynamo recipe removed - GT5 PR #5650 removed 2A Wireless Dynamo Hatches
         }
 
         ImmutableList<ImmutableList<ItemStack>> energyAll = ImmutableList.of(

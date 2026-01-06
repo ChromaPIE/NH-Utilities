@@ -171,14 +171,9 @@ public class WirelessHatchRecipeOld {
             ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_UHV.get(1), ItemList.Hatch_Dynamo_UEV.get(1),
             ItemList.Hatch_Dynamo_UIV.get(1), ItemList.Hatch_Dynamo_UMV.get(1), ItemList.Hatch_Dynamo_UXV.get(1) };
 
-        ItemStack[] wirelessDynamoHatches_2A = { ItemList.Wireless_Dynamo_Energy_ULV.get(1),
-            ItemList.Wireless_Dynamo_Energy_LV.get(1), ItemList.Wireless_Dynamo_Energy_MV.get(1),
-            ItemList.Wireless_Dynamo_Energy_HV.get(1), ItemList.Wireless_Dynamo_Energy_EV.get(1),
-            ItemList.Wireless_Dynamo_Energy_IV.get(1), ItemList.Wireless_Dynamo_Energy_LuV.get(1),
-            ItemList.Wireless_Dynamo_Energy_ZPM.get(1), ItemList.Wireless_Dynamo_Energy_UV.get(1),
-            ItemList.Wireless_Dynamo_Energy_UHV.get(1), ItemList.Wireless_Dynamo_Energy_UEV.get(1),
-            ItemList.Wireless_Dynamo_Energy_UIV.get(1), ItemList.Wireless_Dynamo_Energy_UMV.get(1),
-            ItemList.Wireless_Dynamo_Energy_UXV.get(1) };
+        // NOTE: 2A WirelessDynamoHatch removed by GT5 PR #5650 "Remove Single-amp Wireless Dynamos"
+        // Empty array to maintain array structure compatibility
+        ItemStack[] wirelessDynamoHatches_2A = {};
 
         // dynamo 4A
         ItemStack[] dynamoHatches_4A = { CustomItemList.eM_dynamoMulti4_IV.get(1),

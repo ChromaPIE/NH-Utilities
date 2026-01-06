@@ -334,22 +334,7 @@ public final class LazyHatchHelper {
                 buildHatchBoxed(    VoltageTier.UXV,        ItemList.Wireless_Hatch_Energy_UXV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessEnergyHatch),
                 buildHatchBoxed(    VoltageTier.MAX,        ItemList.Wireless_Hatch_Energy_MAX.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessEnergyHatch),
 
-                // 2A dynamoWireless
-                buildHatchBoxed(    VoltageTier.ULV,        ItemList.Wireless_Dynamo_Energy_ULV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.LV,         ItemList.Wireless_Dynamo_Energy_LV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.MV,         ItemList.Wireless_Dynamo_Energy_MV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.HV,         ItemList.Wireless_Dynamo_Energy_HV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.EV,         ItemList.Wireless_Dynamo_Energy_EV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.IV,         ItemList.Wireless_Dynamo_Energy_IV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.LuV,        ItemList.Wireless_Dynamo_Energy_LuV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.ZPM,        ItemList.Wireless_Dynamo_Energy_ZPM.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.UV,         ItemList.Wireless_Dynamo_Energy_UV.get(1),        HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.UHV,        ItemList.Wireless_Dynamo_Energy_UHV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.UEV,        ItemList.Wireless_Dynamo_Energy_UEV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.UIV,        ItemList.Wireless_Dynamo_Energy_UIV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.UMV,        ItemList.Wireless_Dynamo_Energy_UMV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.UXV,        ItemList.Wireless_Dynamo_Energy_UXV.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
-                buildHatchBoxed(    VoltageTier.MAX,        ItemList.Wireless_Dynamo_Energy_MAX.get(1),       HatchAmperes.AMP_2_A,     HatchType.WirelessDynamoHatch),
+                // NOTE: 2A WirelessDynamoHatch removed by GT5 PR #5650 "Remove Single-amp Wireless Dynamos"
 
                 // 4A energy
                 buildHatchBoxed(    VoltageTier.LV,         WirelessHatchMore.energyMulti_LV_4.get(1),                         HatchAmperes.AMP_4_A,     HatchType.WirelessEnergyHatch ),
