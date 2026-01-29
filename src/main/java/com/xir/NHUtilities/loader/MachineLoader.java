@@ -1,5 +1,6 @@
 package com.xir.NHUtilities.loader;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 import static com.xir.NHUtilities.common.api.enums.MetaTileEntityID.EGG_MACHINE_EV;
 import static com.xir.NHUtilities.common.api.enums.MetaTileEntityID.EGG_MACHINE_IV;
 import static com.xir.NHUtilities.common.api.enums.MetaTileEntityID.EGG_MACHINE_LuV;
@@ -134,7 +135,7 @@ public class MachineLoader {
 
     private static @NotNull String getCN(WirelessHatchMore value, String str) {
         var isCN = trans("Lang.helper.local.lang").equals("zh_CN");
-        if (isCN) return String.format(str, GTUtility.formatNumbers(value.aAmperes), VN[value.aTier]);
-        return String.format(str, VN[value.aTier], GTUtility.formatNumbers(value.aAmperes));
+        if (isCN) return String.format(str, formatNumber(value.aAmperes), VN[value.aTier]);
+        return String.format(str, VN[value.aTier], formatNumber(value.aAmperes));
     }
 }

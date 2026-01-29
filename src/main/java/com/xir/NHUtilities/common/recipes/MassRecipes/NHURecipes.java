@@ -129,9 +129,9 @@ public class NHURecipes {
                 'N',
                 ItemList.QuantumStar.get(1),
                 'E',
-                NHItemList.EngineeringProcessorItemAdvEmeraldCore.getIS(),
+                NHItemList.EngineeringProcessorItemAdvEmeraldCore.get(),
                 'P',
-                NHItemList.EngineeringProcessorSpatialPulsatingCore.getIS(),
+                NHItemList.EngineeringProcessorSpatialPulsatingCore.get(),
                 'W',
                 materials.wirelessBooster()
                     .maybeStack(1)

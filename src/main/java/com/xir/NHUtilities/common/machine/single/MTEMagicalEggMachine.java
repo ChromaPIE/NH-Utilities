@@ -1,5 +1,6 @@
 package com.xir.NHUtilities.common.machine.single;
 
+import static com.gtnewhorizon.gtnhlib.util.numberformatting.NumberFormatUtil.formatNumber;
 import static com.xir.NHUtilities.config.Config.debugMode;
 import static com.xir.NHUtilities.main.ReferencedInfo.OTH_MOD_IS_LOADED;
 import static com.xir.NHUtilities.utils.CommonUtil.newItemStack;
@@ -360,11 +361,11 @@ public class MTEMagicalEggMachine extends MTEBasicGenerator {
         currentAmperes = calculateAmp();
         GTUtility.sendChatToPlayer(
             aPlayer,
-            "Current EU Output: " + GTUtility.formatNumbers(V[currentTier])
+            "Current EU Output: " + formatNumber(V[currentTier])
                 + String.format(
                     " (%s) (%s)",
                     GTUtility.getColoredTierNameFromTier(currentTier),
-                    EnumChatFormatting.LIGHT_PURPLE + GTUtility.formatNumbers(currentAmperes)
+                    EnumChatFormatting.LIGHT_PURPLE + formatNumber(currentAmperes)
                         + "A"
                         + EnumChatFormatting.RESET));
     }
@@ -390,7 +391,7 @@ public class MTEMagicalEggMachine extends MTEBasicGenerator {
             String.format(
                 "Voltage: %s (%s)",
                 GTUtility.getColoredTierNameFromVoltage(voltage),
-                EnumChatFormatting.LIGHT_PURPLE + GTUtility.formatNumbers(Amperes) + "A" + EnumChatFormatting.RESET));
+                EnumChatFormatting.LIGHT_PURPLE + formatNumber(Amperes) + "A" + EnumChatFormatting.RESET));
         currentTip.add(
             String.format(
                 "TotalBonus: %sx",
