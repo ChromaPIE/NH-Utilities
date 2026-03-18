@@ -17,11 +17,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.brandon3055.brandonscore.common.utills.Teleporter;
+import com.brandon3055.draconicevolution.common.utils.Teleporter;
 import com.brandon3055.draconicevolution.client.gui.GUITeleporter;
 import com.brandon3055.draconicevolution.common.ModItems;
 import com.brandon3055.draconicevolution.common.items.tools.TeleporterMKII;
-import com.brandon3055.draconicevolution.common.utills.InventoryUtils;
+
 
 @Mixin(value = GUITeleporter.class)
 @SuppressWarnings("UnusedMixin")
@@ -88,8 +88,7 @@ public abstract class GUITeleporter_Mixin extends GuiScreen {
                 && NHUtilities$banHand()
         ) {
             if (NHUtilities$isBaubles) {
-                Optional<ItemStack> playerBaublesInventory = InventoryUtils
-                    .getItemInPlayerBaublesInventory(player, TeleporterMKII.class);
+                Optional<ItemStack> playerBaublesInventory = getItemInPlayerBaublesInventory(player, TeleporterMKII.class);
                 playerBaublesInventory.ifPresent(this::readDataFromItem);
             } else {
                 readDataFromItem(player.getHeldItem());

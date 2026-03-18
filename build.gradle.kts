@@ -37,7 +37,6 @@ elytraModpackVersion {
             configureGtnhDep("ThaumicTinkerer") { isTransitive = false }
             configureGtnhDep("EnderIO") { isTransitive = false }
             configureGtnhDep("EnderCore") { isTransitive = false }
-            configureGtnhDep("BrandonsCore") { isTransitive = false }
             configureGtnhDep("Draconic-Evolution") { isTransitive = false }
             configureGtnhDep("Botania") { isTransitive = false }
             configureGtnhDep("Avaritia") { isTransitive = false }
