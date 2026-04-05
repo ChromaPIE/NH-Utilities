@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
 
+import gregtech.api.util.GTUtility;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
@@ -15,17 +16,13 @@ import com.xir.NHUtilities.common.api.MTOData;
 import com.xir.NHUtilities.common.api.interfaces.MTO.IMetaObjectProvider;
 import com.xir.NHUtilities.common.api.interfaces.MTO.IMetaTypeObject;
 
-import gregtech.api.util.GTLanguageManager;
-
 @SuppressWarnings("unused")
 public class MetaItemBlockBase extends ItemBlock implements IMetaObjectProvider {
 
     @SuppressWarnings("SpellCheckingInspection")
-    public final String mNoMobsToolTip = GTLanguageManager
-        .addStringLocalization("gt.nomobspawnsonthisblock", "Mobs cannot Spawn on this Block");
+    public final String mNoMobsToolTip = GTUtility.translate("gt.casing.no-mob-spawning");
     @SuppressWarnings("SpellCheckingInspection")
-    public final String mNoTileEntityToolTip = GTLanguageManager
-        .addStringLocalization("gt.notileentityinthisblock", "This is NOT a TileEntity!");
+    public final String mNoTileEntityToolTip = GTUtility.translate("gt.casing.not-tile-entity");
 
     protected MTOData<? extends IMetaTypeObject> mtoData;
 
